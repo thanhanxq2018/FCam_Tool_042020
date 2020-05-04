@@ -81,7 +81,7 @@ namespace FCam_Tool_042020
         {
             #region B1. Gen file hoac Object chua key-value language
 
-            GenFileKeyValue(jsonENPath);
+            GenFileKeyValue(jsonVNPath);
             #endregion
 
             #region B2. Check error
@@ -189,21 +189,26 @@ namespace FCam_Tool_042020
             }
 
             var res = "";
-            if (contentVN.Count != contentKH.Count || contentVN.Count != contentEN.Count || contentEN.Count != contentKH.Count) res = "Kich thuoc 3 file khac nhau. (can format truoc khi check)";
-            for(int i = 0; i < contentVN.Count(); i++)
+
+            if (contentVN.Count != contentKH.Count || contentVN.Count != contentEN.Count || contentEN.Count != contentKH.Count) { res = "Kich thuoc 3 file khac nhau. (can format truoc khi check)"; }
+            var minm = contentVN.Count;
+            if (minm < contentEN.Count) minm = contentEN.Count;
+            if (minm < contentKH.Count) minm = contentKH.Count;
+            for (int i = 0; i < minm; i++)
             {
                 var b = contentVN[i].Replace("\"", "").Replace("\\", "");
-                if (contentVN[i].Replace("\\\"", "").Replace("\\", "") != contentEN[i].Replace("\\\"", "").Replace("\\", "") || 
+                if (contentVN[i].Replace("\\\"", "").Replace("\\", "") != contentEN[i].Replace("\\\"", "").Replace("\\", "") ||
                    contentVN[i].Replace("\\\"", "").Replace("\\", "") != contentKH[i].Replace("\\\"", "").Replace("\\", ""))
                 {
                     res += "===> Error: Line " + i + "\r\n\t vn: " + contentVN[i] + "\r\n\t en: " + contentEN[i] + "\r\n\t kh: " + contentKH[i] + Environment.NewLine;
                 }
             }
 
-            if(string.IsNullOrEmpty(res))
+            if (string.IsNullOrEmpty(res))
             {
                 MessageBox.Show("3 file json đồng bộ, không có lỗi");
-            } else
+            }
+            else
             {
                 CopyToNotepad(res);
             }
@@ -233,7 +238,7 @@ namespace FCam_Tool_042020
                             var lstKeyLv1HasSub = new SubKeyLv1() { KeyLv1 = keyLv1WithSub, KeyLv2 = new List<string>() };
                             i++;
                             countBracer++; // Lv2
-                            while (countBracer >= 2)
+                            while (countBracer == 2)
                             {
                                 if (a[i].Trim() == "}," || a[i].Trim() == "}")
                                 {

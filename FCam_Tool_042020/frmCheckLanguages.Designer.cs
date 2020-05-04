@@ -40,6 +40,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCheck3File = new System.Windows.Forms.Button();
             this.btnCheckNotTran = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chkSelectFile
@@ -122,9 +123,9 @@
             // 
             // btnCheck3File
             // 
-            this.btnCheck3File.Location = new System.Drawing.Point(246, 61);
+            this.btnCheck3File.Location = new System.Drawing.Point(236, 61);
             this.btnCheck3File.Name = "btnCheck3File";
-            this.btnCheck3File.Size = new System.Drawing.Size(117, 23);
+            this.btnCheck3File.Size = new System.Drawing.Size(127, 23);
             this.btnCheck3File.TabIndex = 22;
             this.btnCheck3File.Text = "Check 3 file json";
             this.btnCheck3File.UseVisualStyleBackColor = true;
@@ -139,11 +140,21 @@
             this.btnCheckNotTran.Text = "Check Vietnamese not translated";
             this.btnCheckNotTran.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(67, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Al Check Vietnamese not translated";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmCheckLanguages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 129);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCheckNotTran);
             this.Controls.Add(this.btnCheck3File);
             this.Controls.Add(this.txtTypeSearch);
@@ -174,5 +185,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnCheck3File;
         private System.Windows.Forms.Button btnCheckNotTran;
+        private System.Windows.Forms.Button button1;
     }
 }

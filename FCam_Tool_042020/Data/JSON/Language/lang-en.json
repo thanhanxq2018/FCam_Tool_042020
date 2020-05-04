@@ -120,13 +120,13 @@
     "die": "die",
     "selectFromList": "select From List",
     "connectedDevice": "connected Device",
-    "createLink": "create link",
-    "deleteLink": "delete link",
-    "leftLink": "left link",
-    "rightLink": "right link",
+    "createLink": "Create link",
+    "deleteLink": "Delete link",
+    "leftLink": "Left link",
+    "rightLink": "Right link",
     "both": "Both",
-    "aerialCable": "aerial Cable",
-    "undergroundCable": "underground Cable"
+    "aerialCable": "Aerial cable",
+    "undergroundCable": "Underground cable"
   },
   "usernavbar": {
     "accountMap": "Account Map",
@@ -338,6 +338,15 @@
     "searchLocation": "Search location",
     "actualCoverage": "Actual voverage",
     "planCoverage": "Plan coverage",
+    "loadMailReceiver": "List mail receiver",
+    "viewCoverage": "View coverage",
+    "coverageObject": "Coverage object: ",
+    "objectCoverage": "Object coverage",
+    "hideshowActualCoverage": "Hide / Show actual coverage area",
+    "hideshowPlanCoverage": "Hide / Show planning coverage area",
+    "drawnCoverageArea": "Drawn coverage area",
+    "coverageType": "Coverage type",
+    "coverageArea": "Coverage area",
     "messages": {
       "required": "Please enter",
       "requiredField": "This field is required",
@@ -365,8 +374,8 @@
       "notPermission": "not Permission",
       "validPlanCodeSelect": "valid Plan Code Select",
       "notfoundPlanCode": "not found Plan Code",
-      "notfoundCode": "not found Code",
-      "mustSelectInCbb": "must Select In List",
+      "notfoundCode": "not found Code {{param}} ",
+      "mustSelectInCbb": "must Select {{param}} In List",
       "rangeTimeImplementShift": "range Time Implement Shift",
       "deleteObjConfirm": "delete Obj Confirm",
       "addSuccess": "add Success",
@@ -450,7 +459,10 @@
       "numOfUpdatedObject": "Updated {{param}} router object",
       "deleteWithPosition": "Are you want delete position, too?",
       "projectNoImgToSave": "Project not have image for download",
-      "transportObjToPrj": "Transport the selected objects to the project {{param}} ?"
+      "transportObjToPrj": "Transport the selected objects to the project {{param}} ?",
+      "mustSelectInCombb": "You must choose from the drop down list.",
+      "chooseTypeObjBy": "Please select type of object {{cabType}}",
+      "updatePosition": "Do you want to update new coordinates ?"
     }
   },
   "table": {
@@ -617,7 +629,11 @@
     "no": "No",
     "saveLink": "Save link",
     "deleteLink": "Delete link",
-    "switchHeadEnd": "Switch head/end"
+    "switchHeadEnd": "Switch head/end",
+    "loadAll": "View all",
+    "loadByCondition": "View by Condition",
+    "loadByCustomName": "View by Custormer",
+    "loadByUpdateDate": "View by Update date"
   },
   "label": {
     "mobile": "Mobile",
@@ -1247,7 +1263,11 @@
     "getTokenIstorageErr": "An error occurred while get Token from Istorage",
     "getFileIstorageErr": "An error occurred while get file from Istorage",
     "uploadFileIstorageErr": "An error occurred while upload file to Istorage",
-    "statisErr": "An error occurred while statistics"
+    "statisErr": "An error occurred while statistics",
+    "sendMailErr": "Send mail error",
+    "noteMaxLength": "The system only recognizes {{value}} characters",
+    "fromServerErr": "Server error: ",
+    "fromClientErr": "Error handling power delivery: "
   },
   "pop": {
     "role": {
@@ -1283,7 +1303,6 @@
     "titleResult": "Result AREA OF THE Coverage",
     "nameArea": "name Area",
     "acreageArea": "Coverage Area"
-
   },
   "accInfracture": {
     "title": "Statistics Condition "
@@ -1349,65 +1368,64 @@
     "statisPrjTitle": "statis Project"
   },
   "deployProject": {
-    "projectList": "project List",
-    "onlyCreatorCanChange": "only Creator Can Change",
-    "onlyBrandDirectorCanChange": "only Brand Director Can Change",
-    "noAuthorityChangeOrpromulgated": "no Authority Change Orpromulgated",
-    "noAuthorityDelete": "no Authority Delete",
+    "projectList": "Project list",
+    "onlyCreatorCanChange": "Only creator can change",
+    "onlyBrandDirectorCanChange": "Only brand director can change",
+    "noAuthorityChangeOrpromulgated": "No authority change orpromulgated",
+    "noAuthorityDelete": "No authority delete",
     "bienbanKSHT": {
-      "infrastructureSurveyReport": "infrastructure Survey Report",
-      "expectedPlaceToInstallPointOnCABVN": "expected Place To Install Point On CABVN",
-      "analysTable": "analys Table",
-      "populationDensityAndDemand": "population Density And Demand",
-      "competitorInfo": "competitor Info",
-      "areaCurrentSituation": "area Current Situation",
-      "investmentRegion": "investment Region",
-      "capacityNeedToInvest": "capacity Need To Invest",
-      "residentalBlock": "residental Block (People)",
-      "companyFactoryShopNetBlock": "company Factory Shop Net Block",
-      "schoolBlock": "school Block",
-      "availableFPTSubscriber": "available FPT Subscriber",
-      "totalSubscriberGrow6Months": "total Subscriber Grow 6 Months",
+      "infrastructureSurveyReport": "Infrastructure survey report",
+      "expectedPlaceToInstallPointOnCABVN": "Expected place to install point on CABVN",
+      "analysTable": "Analys table",
+      "populationDensityAndDemand": "Population density and demand",
+      "competitorInfo": "Competitor info",
+      "areaCurrentSituation": "Area current situation",
+      "investmentRegion": "Investment region",
+      "capacityNeedToInvest": "Capacity need to invest",
+      "residentalBlock": "Residental block (People)",
+      "companyFactoryShopNetBlock": "Company factory shop net block",
+      "schoolBlock": "School block",
+      "availableFPTSubscriber": "Available FPT subscriber",
+      "totalSubscriberGrow6Months": "Total subscriber grow 6 months",
       "detailInfo": "Details",
-      "availableVNPTSubscriberNumber": "available VNPT Subscriber Number",
-      "availableViettelSubscriberNumber": "available Viettel Subscriber Number",
-      "availableSubscriberNumber": "available Subscriber Number",
-      "anyElectricalPost": "any Electrical Post",
-      "undergroundizedArea": "undergrounded Area",
-      "directorBoardReview": "director Board Review",
-      "branchDirector": "branch Director"
+      "availableVNPTSubscriberNumber": "Available VNPT subscriber number",
+      "availableViettelSubscriberNumber": "Available Viettel subscriber number",
+      "availableSubscriberNumber": "Available Subscriber number",
+      "anyElectricalPost": "Any Electrical Post",
+      "undergroundizedArea": "Undergrounded Area",
+      "directorBoardReview": "Director Board Review",
+      "branchDirector": "Branch Director"
     },
     "changeObjProject": {
-      "originalProject": "original Project",
-      "projectMoveTo": "project Move To",
+      "originalProject": "Original Project",
+      "projectMoveTo": "Project Move To",
       "searchByNameAddressLatLng": "search By Name Address Locaiton",
-      "filterResult": "filter Result"
+      "filterResult": "Filter result"
     },
     "changeStatusProject": {
-      "projectStatusChangeInfo": "project Status Change Info"
+      "projectStatusChangeInfo": "Project status change info"
     },
     "historyObjectProject": {
-      "projectObjectHistory": "project Object History"
+      "projectObjectHistory": "Project object history"
     },
     "historyStatusProject": {
-      "projectStatusHistory": "project Status History"
+      "projectStatusHistory": "Project status history"
     },
     "listObject": {
-      "projectObjectList": "project Object List",
-      "clickToDownloadAndViewImgFullSize": "click To Download And View Img Full Size"
+      "projectObjectList": "Project object list",
+      "clickToDownloadAndViewImgFullSize": "Click to download and view img full size"
     },
-    "plan": "plan",
-    "acceptProject": "accept Project",
-    "expertise": "expertise",
-    "surveyAndDesign": "survey And Design",
-    "construction": "construction",
-    "completion": "completion",
-    "promulgate": "promulgate",
-    "wantToChangeProject": "want To Change Project",
-    "toStatus": "to Status",
-    "wantToPromulgateAndFinishProj": "want To Promulgate And Finish Proj",
-    "investPort": "invest Port"
-
+    "plan": "Plan",
+    "acceptProject": "Accept Project",
+    "expertise": "Expertise",
+    "surveyAndDesign": "Survey and Design",
+    "construction": "Construction",
+    "completion": "Completion",
+    "promulgate": "Promulgate",
+    "wantToChangeProject": "Want to change Project",
+    "toStatus": "To status",
+    "wantToPromulgateAndFinishProj": "Want to promulgate and finish project",
+    "investPort": "Invest port"
   },
   "drawCableLine": {
     "cableUsedInformation": "cable Used Information",
@@ -1573,7 +1591,7 @@
     "coreListUpper": "LIST CORE",
     "cableInfo": "cable info",
     "statisticCable": "statistic cable",
-    "link": "link",
+    "link": "Link",
     "viewCore": "View Core",
     "linkUpper": "LINK",
     "cableUsePurposeLower": "cable use purpose"
@@ -1710,7 +1728,47 @@
   "ImportKmlToTDProject": {
     "importKMLTitle": "import KML Title"
   },
-  "surveySetUp": {
-    "loadAll": "Load all"
+  "OptimalPath": {
+    "title": {
+      "optimal": "The optimal path TD KH",
+      "listPath": "List of routes",
+      "updateObj": "Update object"
+    },
+    "typeWalk": "Walk",
+    "typeCar": "Cars",
+    "objType": "Object type",
+    "position": {
+      "old": "Old coordinates",
+      "new": "New coordinates"
+    }
+  },
+  "surveySetup": {
+    "title": {
+      "survey": "Survey area - serve",
+      "addContract": "Add contract",
+      "loadCustomerSetup": "Load Customers Waiting for Installation"
+    },
+    "typeSurvey": "Type of region",
+    "localType": "Line Type",
+    "packageService": "Service pack"
+  },
+  "surveyCustomer": {
+    "title": {
+      "loadCustomerSale": "Potential of sale",
+      "addCustomer": "Add customer",
+      "survey": "Customer survey"
+    },
+    "sale": "Choose Sale",
+    "localType": "Line Type",
+    "packageService": "Service pack",
+    "getCustomerDetail": "Get KH details",
+    "getListObjType": "Get a list of categories",
+    "getRulePositionCustomer": "Customer coordinates are invalid",
+    "getListObjByBranch": "Get the list of objects by branch",
+    "getEmptyCustomer": "No customer information",
+    "getEmptyListObjType": "DS object type is empty",
+    "getCustomerFail": "Failed to retrieve customer information",
+    "getListObjTypeFail": "Failed to get object type DS",
+    "getListObjByBranchFail": "Failed to get list of objects by branch"
   }
 }

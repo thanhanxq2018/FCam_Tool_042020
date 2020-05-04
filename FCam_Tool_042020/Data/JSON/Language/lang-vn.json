@@ -338,6 +338,15 @@
     "searchLocation": "Tìm kiếm vị trí",
     "actualCoverage": "Vùng phủ thực tế",
     "planCoverage": "Vùng phủ quy hoạch",
+    "loadMailReceiver": "Danh sách nhận email",
+    "viewCoverage": "Xem vùng phủ",
+    "coverageObject": "Vùng Phủ đối tượng: ",
+    "objectCoverage": "Đối tượng Phủ",
+    "hideshowActualCoverage": "Ẩn/hiện vùng phủ thực tế",
+    "hideshowPlanCoverage": "Ẩn/Hiện vùng phủ quy hoạch",
+    "drawnCoverageArea": "Vẽ vùng phủ",
+    "coverageType": "Loại vùng phủ",
+    "coverageArea": "Vùng phủ tập điểm",
     "messages": {
       "required": "Cần nhập thông tin",
       "requiredField": "Cần nhập thông tin cho trường",
@@ -450,7 +459,10 @@
       "numOfUpdatedObject": "Đã cập nhật {{param}} đối tượng",
       "deleteWithPosition": "Bạn muốn xóa cả vị trí không?",
       "projectNoImgToSave": "Dự án này chưa có hình để download",
-      "transportObjToPrj": "Chuyển đổi các đổi tượng đã chọn vào dự án {{param}} ?"
+      "transportObjToPrj": "Chuyển đổi các đổi tượng đã chọn vào dự án {{param}} ?",
+      "mustSelectInCombb": "Bạn phải chọn trong danh sách đổ xuống.",
+      "chooseTypeObjBy": "Vui lòng chọn loại đối tượng {{cabType}}",
+      "updatePosition": "Bạn muốn cập nhật tọa độ mới?"
     }
   },
   "table": {
@@ -617,7 +629,11 @@
     "no": "Không",
     "saveLink": "Lưu liên kết",
     "deleteLink": "Xóa liên kết",
-    "switchHeadEnd": "Đổi đầu cuối"
+    "switchHeadEnd": "Đổi đầu cuối",
+    "loadAll": "Xem tất cả",
+    "loadByCondition": "Xem theo điều kiện",
+    "loadByCustomName": "Xem theo tên khách hàng",
+    "loadByUpdateDate": "Xem theo thời gian nhập liệu"
   },
   "label": {
     "mobile": "Di động",
@@ -1247,7 +1263,11 @@
     "getTokenIstorageErr": "Xảy ra lỗi khi lấy Token từ istorage",
     "getFileIstorageErr": "Xảy ra lỗi khi lấy file từ istorage",
     "uploadFileIstorageErr": "Xảy ra lỗi khi upload file lên istorage",
-    "statisErr": "Thống kê lỗi"
+    "statisErr": "Thống kê lỗi",
+    "sendMailErr": "Lỗi gửi mail",
+    "noteMaxLength": "Hệ thống chỉ ghi nhận {{value}} ký tự",
+    "fromServerErr": "Lỗi hệ thống: ",
+    "fromClientErr": "Lỗi xử lý giao điện: "
   },
   "pop": {
     "role": {
@@ -1283,7 +1303,6 @@
     "titleResult": "KẾT QUẢ TÍNH DIỆN TÍCH VÙNG PHỦ",
     "nameArea": "TÊN VÙNG",
     "acreageArea": "DIỆN TÍCH VÙNG PHỦ"
-
   },
   "accInfracture": {
     "title": "Điều Kiện Thống Kê"
@@ -1407,7 +1426,6 @@
     "toStatus": "\" sang trạng thái \"",
     "wantToPromulgateAndFinishProj": "Bạn có chắc sẽ ban hành và kết thúc dự án?",
     "investPort": "Port cần đầu tư"
-
   },
   "drawCableLine": {
     "cableUsedInformation": "THÔNG TIN CÁP SỬ DỤNG",
@@ -1710,7 +1728,47 @@
   "ImportKmlToTDProject": {
     "importKMLTitle": "Import KML vào Tập điểm dự án"
   },
-  "surveySetUp": {
-    "loadAll": "Load Tất cả"
+  "OptimalPath": {
+    "title": {
+      "optimal": "Đường đi tối ưu TD KH",
+      "listPath": "Danh sách đường đi",
+      "updateObj": "Cập nhật đối tượng"
+    },
+    "typeWalk": "Đi bộ",
+    "typeCar": "Ô tô",
+    "objType": "Loại đối tượng",
+    "position": {
+      "old": "Tọa độ cũ",
+      "new": "Tọa độ mới"
+    }
+  },
+  "surveySetup": {
+    "title": {
+      "survey": "Khảo sát vùng phủ - phục vụ",
+      "addContract": "Thêm hợp đồng",
+      "loadCustomerSetup": "Load Khách hàng chờ lắp đặt"
+    },
+    "typeSurvey": "Loại vùng phủ",
+    "localType": "Loại Đường truyền",
+    "packageService": "Gói dịch vụ"
+  },
+  "surveyCustomer": {
+    "title": {
+      "loadCustomerSale": "KH Tiềm năng của sale",
+      "addCustomer": "Thêm khách hàng",
+      "survey": "Khảo sát khách hàng"
+    },
+    "sale": "Chọn Sale",
+    "localType": "Loại Đường truyền",
+    "packageService": "Gói dịch vụ",
+    "getCustomerDetail": "Lấy chi tiết KH",
+    "getListObjType": "Lấy danh sách loại dối tượng",
+    "getRulePositionCustomer": "Tọa độ của KH không hợp lệ",
+    "getListObjByBranch": "Lấy danh sách đối tượng theo chi nhánh",
+    "getEmptyCustomer": "Không có thông tin của khách hàng",
+    "getEmptyListObjType": "DS loại đối tượng rỗng",
+    "getCustomerFail": "Lấy thông tin khách hàng thất bại",
+    "getListObjTypeFail": "Lấy DS loại đối tượng thất bại",
+    "getListObjByBranchFail": "Lấy danh sách đối tượng theo chi nhánh thất bại"
   }
 }

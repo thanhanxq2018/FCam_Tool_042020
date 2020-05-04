@@ -120,10 +120,10 @@
     "die": "ងាប់(អត់ដំណើការ)",
     "selectFromList": "ជ្រើសរើសក្នុងតារាងឈ្មោះ",
     "connectedDevice": "ឧបករណ៍សម្រាប់ភ្ជាប់",
-    "createLink": "Tạo liên kết",
-    "deleteLink": "Xóa liên kết",
-    "leftLink": "Liên kết trái",
-    "rightLink": "Liên kết phải",
+    "createLink": "Create link",
+    "deleteLink": "Delete link",
+    "leftLink": "Left link",
+    "rightLink": "Right link",
     "both": "ទាំងពីរ",
     "aerialCable": "ខ្សែកាបចងព្យួ",
     "undergroundCable": "ខ្សែកាបក្រោមដី"
@@ -338,6 +338,15 @@
     "searchLocation": "Search location",
     "actualCoverage": "Actual voverage",
     "planCoverage": "Plan coverage",
+    "loadMailReceiver": "List mail receiver",
+    "viewCoverage": "View coverage",
+    "coverageObject": "Coverage object: ",
+    "objectCoverage": "Object coverage",
+    "hideshowActualCoverage": "Hide / Show actual coverage area",
+    "hideshowPlanCoverage": "Hide / Show planning coverage area",
+    "drawnCoverageArea": "Drawn coverage area",
+    "coverageType": "Coverage type",
+    "coverageArea": "Coverage area",
     "messages": {
       "required": "សូមបញ្ចូល",
       "requiredField": "Field នេះត្រូវតែ​បំពេញ",
@@ -365,8 +374,8 @@
       "notPermission": "អ្នកមិនមានសិទ្ធលើមុខងារនេះទេ",
       "validPlanCodeSelect": "អ្នកត្រូវជ្រើសរើសលេខកូតផែនការនៅក្នុងបញ្ជីចុះក្រោម",
       "notfoundPlanCode": "មិនស្វែងរកឃើញលេខកូតផែនការសមស្រប",
-      "notfoundCode": "មិនរកឃើញលេខកូត​{{0}}សមស្រប",
-      "mustSelectInCbb": "អ្នកត្រូវជ្រើសរើស​ {{0}}​ នៅក្នុងបញ្ជីចុះក្រោម",
+      "notfoundCode": "មិនរកឃើញលេខកូត {{param}} សមស្រប",
+      "mustSelectInCbb": "អ្នកត្រូវជ្រើសរើស​ {{param}} នៅក្នុងបញ្ជីចុះក្រោម",
       "rangeTimeImplementShift": "ចន្លោះពេលវេលាពីថ្ងៃ-ដល់ថ្ងៃចាប់ផ្តើមអនុវត្តវេន",
       "deleteObjConfirm": "តើអ្នកចង់លុបកម្មវត្ថុនេះទេ?",
       "addSuccess": "Add ជោគជយ័",
@@ -445,12 +454,15 @@
       "addedNewUpdateSuccess": "added ថ្មី, Update បាននជោគជយ័",
       "addedNewSuccess": "added ថ្មីបាននជោគជយ័",
       "pauseToExportWord": "ផ្អាកដំណើការដើម្បីចេញ  file word",
-      "headEndNotOverlapEmpty": "Đầu cuối không trùng  nhau và không để trống",
+      "headEndNotOverlapEmpty": "head end not overlap and empty",
       "numOfUpdatedCables": "Updated {{param}} router cable",
       "numOfUpdatedObject": "Updated {{param}} router object",
       "deleteWithPosition": "Are you want delete position, too?",
       "projectNoImgToSave": "Project not have image for download",
-      "transportObjToPrj": "Transport the selected objects to the project {{param}} ?"
+      "transportObjToPrj": "Transport the selected objects to the project {{param}} ?",
+      "mustSelectInCombb": "You must choose from the drop down list.",
+      "chooseTypeObjBy": "Please select type of object {{cabType}}",
+      "updatePosition": "Do you want to update new coordinates ?"
     }
   },
   "table": {
@@ -539,7 +551,7 @@
     "squarePost": "បង្គោលជ្រុង",
     "ironPost": "បង្គោលដែក",
     "otherPost": "បង្គោលផ្សេងៗទៀត",
-    "display": "Hiển thị",
+    "display": "Display",
     "coreRoute": "សរសៃ core"
   },
   "button": {
@@ -558,7 +570,7 @@
     "login": "ចូល",
     "logout": "ចាចេញ",
     "assign": "បែងចែក",
-    "unassign": "un assign",
+    "unassign": "Unassign",
     "back": "ថយក្រោយ",
     "cancelDialog": "បោះបង់ចោល",
     "ok": "OK",
@@ -615,9 +627,13 @@
     "agree": "យល់ព្រម",
     "yes": "មាន",
     "no": "មិនមាន",
-    "saveLink": "Lưu liên kết",
-    "deleteLink": "Xóa liên kết",
-    "switchHeadEnd": "Đổi đầu cuối"
+    "saveLink": "Save link",
+    "deleteLink": "Delete link",
+    "switchHeadEnd": "Switch head/end",
+    "loadAll": "View all",
+    "loadByCondition": "View by Condition",
+    "loadByCustomName": "View by Custormer",
+    "loadByUpdateDate": "View by Update date"
   },
   "label": {
     "mobile": "ចលត័",
@@ -855,31 +871,31 @@
     "enterNew": "បញ្ចូលថ្មី",
     "surveyLength": "ប្រវែង Survey",
     "serviceInstallDate": "ថ្ងៃនៃការតំឡើងសេវាកម្ម",
-    "oldHeadPoint": "Điểm đầu cũ",
-    "oldEndPoint": "Điểm cuối cũ",
-    "newHeadPoint": "Điểm đầu mới",
-    "newEndPoint": "Điểm cuối cũ",
-    "cableName": "Tên cáp",
-    "headCab": "Đầu sợi",
-    "endCab": "Cuối sợi",
-    "headMeterIndex": "Chỉ số mét đầu",
-    "endMeterIndex": "Chỉ số mét cuối",
-    "countCabFrom": "Count cáp từ",
-    "countCabTo": "Count cáp đến",
+    "oldHeadPoint": "Old head point",
+    "oldEndPoint": "Old end point",
+    "newHeadPoint": "New head point",
+    "newEndPoint": "New end point",
+    "cableName": "Cable name",
+    "headCab": "Head cab",
+    "endCab": "End cab",
+    "headMeterIndex": "Head meter index",
+    "endMeterIndex": "End meter index",
+    "countCabFrom": "Count cab from",
+    "countCabTo": "Count cab to",
     "cableType": "ប្រភេទខ្សែកាប",
-    "installMethod": "Phương thức lắp đặt",
-    "datePutIntoUse": "Ngày đưa vào sử dụng",
+    "installMethod": "Install method",
+    "datePutIntoUse": "Date put into use",
     "coreUse": "core ប្រើប្រាស់",
     "coreFree": "core ទំនេរ",
-    "coreError": "Core hư",
-    "coreLose": "Core suy hao",
-    "coreMaintain": "Core bảo trì",
-    "cableCode": "Mã cáp",
-    "actual": "Thực",
-    "cableSpec": "Thông số cáp",
-    "head": "Đầu",
-    "end": "Cuối",
-    "searchCableRoute": "Tìm tuyến cáp"
+    "coreError": "Core error",
+    "coreLose": "Attenuation core ",
+    "coreMaintain": "Maintain core",
+    "cableCode": "Cable code",
+    "actual": "Actual",
+    "cableSpec": "Parameter cable",
+    "head": "Head",
+    "end": "End",
+    "searchCableRoute": "Search cable router"
   },
   "placeholder": {
     "enterNumber": "បញ្ចូលលេខ",
@@ -923,8 +939,8 @@
   "error": {
     "dataImport": "ទិន្នន័យបញ្ចូល",
     "noResultData": "មិនមានទិន្នន័យ",
-    "noResultDataCable": "Không có thông tin đoạn cáp",
-    "noResultDataCableDevice": "Không có thông tin thiết bị của đoạn cáp",
+    "noResultDataCable": "No data found for selected cable",
+    "noResultDataCableDevice": "No data found for device of selected cable",
     "Error": "Error",
     "IncorrectPassword": "លេខសម្ងាត់បច្ចុប្បន្នមិនត្រឹមត្រូវទេសូមព្យាយាមម្តងទៀត",
     "IncorrectUser": "យើងរកមិនឃើញទម្រង់ណាមួយដែលត្រូវគ្នានឹងព័ត៌មានដែលអ្នកបានផ្តល់ទេ។ សូម​ព្យាយាម​ម្តង​ទៀត។",
@@ -1219,21 +1235,21 @@
     "dataReviewPOPErr": "យកទិន្ននយ័នៃការវាយតំនៃPOP",
     "cantGetDevice": "មិនយកបានឧបករណ៍",
     "cantGetDCustomer": "មិនយកបានឧបករណ៍",
-    "maxlengthInput": "Độ dài không quá {{param}} ký tự.",
-    "minlengthInput": "Độ dài tối thiểu là {{param}} ký tự.",
-    "intergerRequire": "Chỉ được nhập số nguyên",
-    "inputPatternReq": "Sai định dạng",
-    "inputPatternReqParam": "Bạn cần nhập vào {{param}}",
-    "maxReq": "Giá trị lớn nhất là {{param}}",
-    "minReq": "Giá trị nhỏ nhất là {{param}}",
-    "notSpecialChar": "Tên không chứa ký tự đặc biệt",
-    "selectMax3Img": "Chọn tối đa không quá 3 ảnh",
-    "namePrjExisted": "Tên dự án đã tồn tại",
-    "invalidEmailFrom": "Sai định dạng email",
-    "invalidEmailCC": "Sai định dạng email. Các email phân cách nhau bằng dấu ';' ",
+    "maxlengthInput": "Maxlength {{param}} char.",
+    "minlengthInput": "Min length {{param}} char.",
+    "intergerRequire": "Only integers can be entered",
+    "inputPatternReq": "Invalid format",
+    "inputPatternReqParam": "Require enter {{param}}",
+    "maxReq": "Max value is {{param}}",
+    "minReq": "Min value is {{param}}",
+    "notSpecialChar": "The name does not contain special characters",
+    "selectMax3Img": "Select no more than 3 images",
+    "namePrjExisted": "Name of project exist",
+    "invalidEmailFrom": "Wrong email format",
+    "invalidEmailCC": "Wrong email format",
     "maxRadius": "រង្វង់អប្បបរិមា",
     "minRadius": "រង្វង់អត្តិបរិមា",
-    "objectExist": "Đối tượng đã tồn tại",
+    "objectExist": "The object already exists",
     "wrongFormat": "ខុសទម្រង់",
     "updateObjCableRouteErr": "An error occurred while update object or cable router",
     "updateRightErr": "Error with update right",
@@ -1247,7 +1263,11 @@
     "getTokenIstorageErr": "An error occurred while get Token from Istorage",
     "getFileIstorageErr": "An error occurred while get file from Istorage",
     "uploadFileIstorageErr": "An error occurred while upload file to Istorage",
-    "statisErr": "An error occurred while statistics"
+    "statisErr": "An error occurred while statistics",
+    "sendMailErr": "Send mail error",
+    "noteMaxLength": "The system only recognizes {{value}} characters",
+    "fromServerErr": "Server error: ",
+    "fromClientErr": "Error handling power delivery: "
   },
   "pop": {
     "role": {
@@ -1257,7 +1277,7 @@
     }
   },
   "manchon": {
-    "title": "Thống kê măng xông theo tuyến",
+    "title": "Statistics of manchon by route",
     "labelCabLayer": "ជ្រើសរើសស្រទាប់ខ្សែកាប",
     "labelManchonLayer": "ជ្រើសរើសសរសៃខ្សែកាប",
     "buttonStatis": "ស្ថិតិ",
@@ -1266,7 +1286,7 @@
     "axis": "ខ្សែមេធំ"
   },
   "listRouteCable": {
-    "title": "TUYẾN CÁP",
+    "title": "CABLE ROUTER",
     "labelRouteType": "ប្រភេទសរសៃកាប",
     "labelBuildingCode": "លេខកូតគម្រោង",
     "labelInvestment": "ដើមទុនវិនិយោគ",
@@ -1275,18 +1295,17 @@
     "placeholderSearch": "ស្វែងរកម៉ាំងសុងតាមឈ្មោះ,កូត,ផែនទី,អាសយ័ដ្ធាន"
   },
   "polyline": {
-    "title": "Caps thay đổi",
+    "title": "Caps change",
     "note": "ចំណាំ"
   },
   "areaCalculation": {
-    "title": "TÍNH DIỆN TÍCH VÙNG PHỦ",
+    "title": "Result AREA OF THE Coverage",
     "titleResult": "លទ្ធិផលគណនាផ្ទៃក្រលាតំបន់",
     "nameArea": "ឈ្មោះតំបន់",
     "acreageArea": "ផ្ទៃក្រលាតំបន់"
-
   },
   "accInfracture": {
-    "title": "Điều Kiện Thống Kê"
+    "title": "Statistics Condition "
   },
   "map": {
     "clearMap": "លុប",
@@ -1296,17 +1315,17 @@
     "captureCoverage": "ចាប់យកគ្របដណ្តប់",
     "backFirstPosition": "ត្រឡប់ទៅទីតាំងដំបូង",
     "streetViewMode": "មើនៅកម្រឹត street View",
-    "closeResultTittle": "Đóng kết quả",
-    "totalDistance": "Tổng khoảng cách",
-    "segmentChange": "Đoạn thay đổi",
-    "distanceMeasureRes": "Kết quả đo khoảng cách"
+    "closeResultTittle": "Close result",
+    "totalDistance": "Total distance",
+    "segmentChange": "Segment change",
+    "distanceMeasureRes": "Distance measure result"
   },
   "mapStyle": {
-    "title": "Giao diện bản đồ",
+    "title": "Map interface",
     "street": "ផ្លូវ",
     "densityGeographic": "ដង់ស៊ីតេនៃកម្មវត្ថុភូមិសាស្ដ្រ",
     "topographic": "ភូមិសាស្ត្រ",
-    "label": "Nhãn hiệu",
+    "label": "Label",
     "theme": "ប្រធានបទ",
     "standard": "ស្តង់ដា",
     "silver": "ប្រាក់",
@@ -1342,8 +1361,8 @@
     "portToInvest": "ចំនួន​ Port ដែលត្រូវវិនិយោគ",
     "titlePortExpect": "ចំនួន​ Port ដែលត្រូវវិនិយោគ=((គ្រួសារ*ទីផ្សារចែកចាយ)/អត្រាដំណើការខ្សែធំ)-portដែលមានស្រាប់",
     "titlePortEstimate": "Port ប៉ាន់ស្មាន=Port ដែលត្រូវវិនិយោគ+(Port ដែលត្រូវវិនិយោគ*20%)",
-    "projectPointList": "Danh sách Tập điểm dự án: ",
-    "pointDetail": "Chi tiết tập điểm: "
+    "projectPointList": "List point of project: ",
+    "pointDetail": "Points detail: "
   },
   "reportProject": {
     "statisPrjTitle": "ស្ថិតិគម្រោង"
@@ -1407,7 +1426,6 @@
     "toStatus": "ទៅស្ថានភាព",
     "wantToPromulgateAndFinishProj": "អ្នកប្រាកដថាប្រកាសឱ្យប្រើនិងបញ្ចប់គម្រោងនេះ?",
     "investPort": "Port ដែលត្រូវវិនិយោគ"
-
   },
   "drawCableLine": {
     "cableUsedInformation": "ពត៌មានខ្សែដែលប្រើប្រាស់",
@@ -1475,7 +1493,7 @@
     "implementPeriod": "គន្លងពេលវេលាពីថ្ងៃ-ទៅថ្ងៃចាប់ផ្តើមអនុវត្ត"
   },
   "deviceConnect": {
-    "title": "THIẾT BỊ KẾT NỐI"
+    "title": "Device connect"
   },
   "bookPort": {
     "titlePON": "BookPort ប្រអប់ចែកចាយ PON ",
@@ -1548,10 +1566,10 @@
     "surveyArea": "Survey តំបន់"
   },
   "containerSeriAccu": {
-    "title": "Quản lý số seri accu container"
+    "title": "container seri accu managerment"
   },
   "infoCabline": {
-    "title": "THÔNG TIN CÁP",
+    "title": "CABLE INFOMATION",
     "nowNoCableInPipeNumber": "បច្ចុប្បន្នមិនមានខ្សែកាបនៅក្នុងបំពង់ខ្យល់",
     "cableUsePurpose": "ខ្សែកាប MDSD",
     "cableCoreStatus": "ស្ថានភាព Core របស់ខ្សែកាប",
@@ -1562,24 +1580,24 @@
     "coreOfCable": "core របស់ខ្សែកាប",
     "noCore": "គ្មាន Core",
     "cableCore": "Core ខ្សែកាប",
-    "infoCabline": "LIÊN KẾT CORE",
-    "ADSLCableInfo": "THÔNG TIN CÁP ADSL",
-    "ADSLDetail": "Chi tiết ADSL",
+    "infoCabline": "LINK CORE",
+    "ADSLCableInfo": "ADSL Cable Info",
+    "ADSLDetail": "ADSL Detail",
     "ADSLInfo": "ពត៌មាន ADSL",
-    "PONCableInfo": "THÔNG TIN CÁP PON",
-    "PONDetail": "Chi tiết PON",
-    "coreList": "Danh sách core",
-    "PONInfo": "THÔNG TIN PON",
-    "coreListUpper": "DANH SÁCH CORE",
-    "cableInfo": "Thông tin cáp",
-    "statisticCable": "Thống kê cáp",
-    "link": "Liên kết",
-    "viewCore": "Xem Core",
-    "linkUpper": "LIÊN KẾT",
-    "cableUsePurposeLower": "Mục đích sử dụng"
+    "PONCableInfo": "PON cable info",
+    "PONDetail": "PON Detail",
+    "coreList": "core list",
+    "PONInfo": "PON INFORMATION",
+    "coreListUpper": "LIST CORE",
+    "cableInfo": "cable info",
+    "statisticCable": "statistic cable",
+    "link": "Link",
+    "viewCore": "View Core",
+    "linkUpper": "LINK",
+    "cableUsePurposeLower": "Cable Use Purpose"
   },
   "attenuationCore": {
-    "title": "Thông tin core suy hao",
+    "title": "attenuation core info",
     "fibersG652D": "ប្រភេទសរសៃ fibers G652D",
     "fibersG652": "ប្រភេទសរសៃ fibers G652",
     "fibersG655": "ប្រភេទសរសៃ fibers G655",
@@ -1710,7 +1728,47 @@
   "ImportKmlToTDProject": {
     "importKMLTitle": "import KML និងប្រអប់ចែកចាយអោយគម្រោង"
   },
-  "surveySetUp": {
-    "loadAll": "Load Tất cả"
+  "OptimalPath": {
+    "title": {
+      "optimal": "The optimal path TD KH",
+      "listPath": "List of routes",
+      "updateObj": "Update object"
+    },
+    "typeWalk": "Walk",
+    "typeCar": "Cars",
+    "objType": "Object type",
+    "position": {
+      "old": "Old coordinates",
+      "new": "New coordinates"
+    }
+  },
+  "surveySetup": {
+    "title": {
+      "survey": "Survey area - serve",
+      "addContract": "Add contract",
+      "loadCustomerSetup": "Load Customers Waiting for Installation"
+    },
+    "typeSurvey": "Type of region",
+    "localType": "Line Type",
+    "packageService": "Service pack"
+  },
+  "surveyCustomer": {
+    "title": {
+      "loadCustomerSale": "Potential of sale",
+      "addCustomer": "Add customer",
+      "survey": "Customer survey"
+    },
+    "sale": "Choose Sale",
+    "localType": "Line Type",
+    "packageService": "Service pack",
+    "getCustomerDetail": "Get KH details",
+    "getListObjType": "Get a list of categories",
+    "getRulePositionCustomer": "Customer coordinates are invalid",
+    "getListObjByBranch": "Get the list of objects by branch",
+    "getEmptyCustomer": "No customer information",
+    "getEmptyListObjType": "DS object type is empty",
+    "getCustomerFail": "Failed to retrieve customer information",
+    "getListObjTypeFail": "Failed to get object type DS",
+    "getListObjByBranchFail": "Failed to get list of objects by branch"
   }
 }
