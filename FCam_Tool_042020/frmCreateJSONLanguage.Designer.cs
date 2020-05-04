@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 112);
+            this.ClientSize = new System.Drawing.Size(620, 221);
             this.Controls.Add(this.txtTypeSearch);
             this.Controls.Add(this.btnProgess);
             this.Controls.Add(this.chkSearchSub);

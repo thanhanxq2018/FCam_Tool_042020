@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.chkSelectFile = new System.Windows.Forms.CheckBox();
             this.lblPath = new System.Windows.Forms.Label();
             this.txtInputPath = new System.Windows.Forms.TextBox();
@@ -36,6 +37,9 @@
             this.btnProgess = new System.Windows.Forms.Button();
             this.txtTypeSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCheck3File = new System.Windows.Forms.Button();
+            this.btnCheckNotTran = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // chkSelectFile
@@ -88,11 +92,11 @@
             // 
             // btnProgess
             // 
-            this.btnProgess.Location = new System.Drawing.Point(493, 62);
+            this.btnProgess.Location = new System.Drawing.Point(67, 61);
             this.btnProgess.Name = "btnProgess";
-            this.btnProgess.Size = new System.Drawing.Size(69, 23);
+            this.btnProgess.Size = new System.Drawing.Size(147, 23);
             this.btnProgess.TabIndex = 20;
-            this.btnProgess.Text = "Progess";
+            this.btnProgess.Text = "Check  translate not exist";
             this.btnProgess.UseVisualStyleBackColor = true;
             this.btnProgess.Click += new System.EventHandler(this.btnProgess_Click);
             // 
@@ -112,11 +116,36 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Type";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
+            // btnCheck3File
+            // 
+            this.btnCheck3File.Location = new System.Drawing.Point(246, 61);
+            this.btnCheck3File.Name = "btnCheck3File";
+            this.btnCheck3File.Size = new System.Drawing.Size(117, 23);
+            this.btnCheck3File.TabIndex = 22;
+            this.btnCheck3File.Text = "Check 3 file json";
+            this.btnCheck3File.UseVisualStyleBackColor = true;
+            this.btnCheck3File.Click += new System.EventHandler(this.btnCheck3File_Click);
+            // 
+            // btnCheckNotTran
+            // 
+            this.btnCheckNotTran.Location = new System.Drawing.Point(386, 61);
+            this.btnCheckNotTran.Name = "btnCheckNotTran";
+            this.btnCheckNotTran.Size = new System.Drawing.Size(176, 23);
+            this.btnCheckNotTran.TabIndex = 23;
+            this.btnCheckNotTran.Text = "Check Vietnamese not translated";
+            this.btnCheckNotTran.UseVisualStyleBackColor = true;
+            // 
             // frmCheckLanguages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 129);
+            this.Controls.Add(this.btnCheckNotTran);
+            this.Controls.Add(this.btnCheck3File);
             this.Controls.Add(this.txtTypeSearch);
             this.Controls.Add(this.btnProgess);
             this.Controls.Add(this.chkSearchSub);
@@ -142,5 +171,8 @@
         private System.Windows.Forms.Button btnProgess;
         private System.Windows.Forms.TextBox txtTypeSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnCheck3File;
+        private System.Windows.Forms.Button btnCheckNotTran;
     }
 }
